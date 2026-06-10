@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f8ea;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 5px solid #1b5e20;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.sobre {
+    padding: 50px 0;
+}
+
+.sobre h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+/* 🎨 ESTILO ESPECIAL PARA O VÍDEO 🎥 */
+.video-container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    text-align: center;
+    border-top: 5px solid #2e7d32;
+}
+
+.video-container h3 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.descricao-video {
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    border-top: 5px solid #2e7d32;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.jogo {
+    background-color: white;
+    padding: 50px 0;
+    border-top: 3px solid #e0e0e0;
+}
+
+.jogo h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 30px;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carta {
+    aspect-ratio: 1;
+    background-color: #2e7d32;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.carta.virada {
+    background-color: white;
+    color: #2e7d32;
+    border: 3px solid #2e7d32;
+}
+
+.carta.acertada {
+    background-color: #81c784;
+    cursor: default;
+}
+
+#reiniciar {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reiniciar:hover {
+    background-color: #1b5e20;
+}
+
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .tabuleiro {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .video-container iframe {
+        height: 250px;
+    }
+}
